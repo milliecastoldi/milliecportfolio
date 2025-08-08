@@ -1,21 +1,22 @@
 import React from 'react'; 
+import { Link } from "react-router-dom";
 
 import '../style/style.css';
 
 export default function HomePage() {
     return (
-    <body>
+    <>
     <header>
        <nav>
-            <a href="./about.html" >About</a>
-            <a href="./projects.html">Projects</a>
-            <a href="./contact.html">Contact</a>
+            <Link to="/about" >About</Link>
+            <Link to="/projects" >Projects</Link>
+            <Link to="/contact" >Contact</Link>
        </nav>
     </header>
 
     <main>
         <div>
-            <img src="../img/IMG_0901.JPG" alt="Professional outdoor headshot of Millie Castoldi wearing a University of Washington t-shirt"/>
+            <img src="/img/IMG_0901.JPG" alt="Professional outdoor headshot of Millie Castoldi wearing a University of Washington t-shirt"/>
 
             <div>
                 <h1>Hi, my name is Millie Castoldi</h1> 
@@ -26,31 +27,31 @@ export default function HomePage() {
 
         <div>
             <h3> Quick links </h3>
-            <div class="link-card-container">
+            <div className="link-card-container">
             </div>
         </div>
 
         <div>
             <h3> Skills </h3>   
 
-            <div class="card-grid-container">
-                <div class="card glass-element">
+            <div className="card-grid-container">
+                <div className="card glass-element">
                     <p>Java</p>
                 </div>
 
-                <div class="card glass-element">
+                <div className="card glass-element">
                     <p>JavaScript</p>
                 </div>
 
-                <div class="card glass-element">
+                <div className="card glass-element">
                     <p>React</p>
                 </div>
 
-                <div class="card glass-element">
+                <div className="card glass-element">
                     <p>Firebase</p>
                 </div>
 
-                  <div class="card glass-element">
+                  <div className="card glass-element">
                     <p>R</p>
                 </div>
 
@@ -60,6 +61,6 @@ export default function HomePage() {
         </div>
 
     </main>
-    </body>
+    </>
     );
 }
