@@ -36,13 +36,10 @@ img:hover {
 
 header {
     background-color: #011936;
-    display: flex; 
     width: 90%; 
-    justify-content: right;
-    height: 40px; 
-    padding: .5em;
+    padding: .1rem 1em;
     position: fixed; 
-    top: 20px; 
+    top: 25px; 
     left: 5%; 
     border-radius: 50px; 
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
@@ -55,7 +52,7 @@ header:hover {
 a {
     color: #FFF193; 
     text-decoration-line: none;
-    padding: 2em; 
+    padding: .3em; 
     font-size: 30px; 
 }
 
@@ -87,4 +84,13 @@ div {
   
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2), 
               inset 0 4px 20px rgba(255, 255, 255, 0.3); /* Outer and inner shadows */
+}
+
+nav {
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.nav-links {
+    margin-left: auto; 
 }

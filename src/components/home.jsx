@@ -1,22 +1,16 @@
 import React from 'react'; 
 import { Link } from "react-router-dom";
+import Nav from './nav'
 
 import '../style/style.css';
 
 export default function HomePage() {
     return (
     <>
-    <header>
-       <nav>
-            <Link to="/about" >About</Link>
-            <Link to="/projects" >Projects</Link>
-            <Link to="/contact" >Contact</Link>
-       </nav>
-    </header>
-
+       <Nav />
     <main>
         <div>
-            <img src="/img/IMG_0901.JPG" alt="Professional outdoor headshot of Millie Castoldi wearing a University of Washington t-shirt"/>
+            <img src="./public/IMG_0901.JPG" alt="Professional outdoor headshot of Millie Castoldi wearing a University of Washington t-shirt"/>
 
             <div>
                 <h1>Hi, my name is Millie Castoldi</h1> 
