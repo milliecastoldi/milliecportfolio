@@ -1,0 +1,90 @@
+body {
+    background-image: linear-gradient(#0047AB,#011936);
+    color: #FDF6EC;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; 
+  padding: 2rem; 
+  margin-top: 75px; 
+}
+
+h2 {
+    color: #FFF193;
+}
+
+h3 {
+    color: #FFF193;
+}
+
+img {
+    height: 300px; 
+    width: 300px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    object-position: 50% 30%; 
+    margin: 30px; 
+}
+
+img:hover {
+    border: 5px solid #FFF193; 
+}
+
+header {
+    background-color: #011936;
+    display: flex; 
+    width: 90%; 
+    justify-content: right;
+    height: 40px; 
+    padding: .5em;
+    position: fixed; 
+    top: 20px; 
+    left: 5%; 
+    border-radius: 50px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
+header:hover {
+    border: 2px solid #FFF193;
+}
+
+a {
+    color: #FFF193; 
+    text-decoration-line: none;
+    padding: 2em; 
+    font-size: 30px; 
+}
+
+a:hover {
+    color: #FDF6EC;
+}
+
+.card-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+    background-color: #0047AB;
+    border-radius: 5px; 
+    margin: 1em; 
+    padding: 1em;
+    box-shadow: 5px 5px #011936;
+}
+
+div {
+    padding: .5em;
+}
+
+.glass-element {
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
+  backdrop-filter: blur(10px) saturate(180%); /* Blur and saturation for frosted effect */
+  border-radius: 15px; /* Rounded corners */
+  
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2), 
+              inset 0 4px 20px rgba(255, 255, 255, 0.3); /* Outer and inner shadows */
+}
