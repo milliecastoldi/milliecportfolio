@@ -1,16 +1,20 @@
 import React from 'react'; 
 import { Link } from "react-router-dom";
 import Nav from './nav'
-
+import { BackgroundBeams } from './ui/background-beams';
 import '../style/style.css';
 
 export default function HomePage() {
     return (
     <>
-       <Nav />
-    <main>
+    <div className="relative w-full h-screen overflow-hidden">
+      <BackgroundBeams className="absolute inset-0 z-0" />
+
+
+    <main className="relative z-10">
+        <Nav />
         <div>
-            <img src="./public/IMG_0901.JPG" alt="Professional outdoor headshot of Millie Castoldi wearing a University of Washington t-shirt"/>
+            <img src="/IMG_0901.JPG" alt="Professional outdoor headshot of Millie Castoldi wearing a University of Washington t-shirt"/>
 
             <div>
                 <h1>Hi, my name is Millie Castoldi</h1> 
@@ -55,6 +59,7 @@ export default function HomePage() {
         </div>
 
     </main>
+    </div>
     </>
     );
 }

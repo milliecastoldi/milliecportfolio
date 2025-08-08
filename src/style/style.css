@@ -1,3 +1,9 @@
+*, *::before, *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
 body {
     background-image: linear-gradient(#0047AB,#011936);
     color: #FDF6EC;
@@ -28,10 +34,11 @@ img {
     object-fit: cover; 
     object-position: 50% 30%; 
     margin: 30px; 
+    border: 3px solid #FFF193; 
 }
 
 img:hover {
-    border: 5px solid #FFF193; 
+    border: 3px solid #FFF193; 
 }
 
 header {
@@ -43,10 +50,11 @@ header {
     left: 5%; 
     border-radius: 50px; 
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+    border: 2px solid #FFF193;
 }
 
 header:hover {
-    border: 2px solid #FFF193;
+    border: 2px solid #FDF6EC;
 }
 
 a {
@@ -93,4 +101,36 @@ nav {
 
 .nav-links {
     margin-left: auto; 
+}
+
+.relative { position: relative; }
+.absolute { position: absolute; }
+.z-0 { z-index: 0; }
+.z-10 { z-index: 10; }
+.inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+
+form {
+    margin-top: 150px; 
+}
+
+input, textArea {
+    color: #011936;
+    background-color: #FDF6EC;
+    padding: 1em; 
+    margin: 1em; 
+    width: 100%; 
+    border-radius: 10px; 
+}
+
+input:hover, textArea:hover {
+    background-color: #FDF6EC;
+    border: 3px solid #FFF193;
+}
+
+label {
+    color: #FFF193;
+}
+
+input .submit {
+    background-color: #FFF193;
 }
