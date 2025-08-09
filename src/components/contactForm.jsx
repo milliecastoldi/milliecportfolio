@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
-import Nav from './nav'
+import { getDatabase, ref, push } from "firebase/database"; 
+
 
 import '../style/style.css'
 
 export default function ContactForm() {
+
+    const db = getDatabase(); 
+
     const [firstName, setFirstName] = useState(''); 
     const [surname, setSurname] = useState('');
     const [subject, setSubject] = useState(''); 
@@ -16,10 +20,33 @@ export default function ContactForm() {
 
         e.preventDefault(); 
 
+        if (!firstName || !surname || !email || !subject || !message) {
+            setStatus("Please fill in all fields.");
+            return;
+        }
 
+          try {
+            await push(ref(db, "messages"), {
+                firstName,
+                surname,
+                email,
+                subject,
+                message,
+                timestamp: Date.now()
+            });
 
+            setStatus("Message sent!");
+            setFirstName('');
+            setSurname('');
+            setEmail('');
+            setSubject('');
+            setMessage('');
+        } catch (error) {
+            console.error(error);
+            setStatus("Error sending message.");
+        }
+    };
 
-    }
 
     return (
         <form onSubmit={handleSubmit}>
@@ -41,8 +68,5 @@ export default function ContactForm() {
             <input type="submit" value="Submit Message" />
         </form>
     )
-
-
-
 
 }
