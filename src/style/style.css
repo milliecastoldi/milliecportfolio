@@ -94,6 +94,9 @@ div {
               inset 0 4px 20px rgba(255, 255, 255, 0.3); /* Outer and inner shadows */
 }
 
+
+/* NAV STYLING */
+
 nav {
     display: flex; 
     justify-content: space-between; 
@@ -103,11 +106,18 @@ nav {
     margin-left: auto; 
 }
 
+
+/* BEAM STYLING */  
+
 .relative { position: relative; }
 .absolute { position: absolute; }
 .z-0 { z-index: 0; }
 .z-10 { z-index: 10; }
 .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+
+
+
+/* FORM STYLING */
 
 form {
     margin-top: 150px; 
@@ -119,7 +129,10 @@ input, textArea {
     padding: 1em; 
     margin: 1em; 
     width: 100%; 
-    border-radius: 10px; }
+    border-radius: 10px; 
+    display: flex;
+    flex-direction: column;
+}
 
 input:hover, textArea:hover {
     background-color: #FDF6EC;
@@ -128,8 +141,17 @@ input:hover, textArea:hover {
 
 label {
     color: #FFF193;
+    display: inline-block; 
 }
 
-input .submit {
-    background-color: #FFF193;
+input[type=submit] {
+    width: 250px; 
 }
+
+.names {
+    display: flex; 
+    justify-content: space-between;
+    width: 100%; 
+}
+
+ /*form styling goals: add button animation, make it all sit nicely inline, add focus properties, add a background to the whole form to make it look contained and "bento boxish?" 

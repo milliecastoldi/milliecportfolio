@@ -50,12 +50,16 @@ export default function ContactForm() {
 
     return (
         <form onSubmit={handleSubmit}>
-            <label htmlFor="firstName">First Name</label>
-            <input type="text" id="firstName" name="firstName" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+
+            <div className="names">
+                 <label htmlFor="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
 
             <label htmlFor="surname">Last Name</label>
             <input type="text" id="surname" name="surname" value={surname} onChange={(e) => setSurname(e.target.value)} /> <br />
 
+            </div>
+            
             <label htmlFor="email">Email</label>
             <input type="text" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} /> <br />
 
@@ -66,6 +70,7 @@ export default function ContactForm() {
             <textArea id="message" name="message" value={message} onChange={(e) => setMessage(e.target.value)} /> <br />
 
             <input type="submit" value="Submit Message" />
+
         </form>
     )
 

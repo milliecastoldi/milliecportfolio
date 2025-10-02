@@ -6,6 +6,7 @@ import './style/style.css'
 import App from './App.jsx'
 
 import { app } from './firebase.js';  
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
   <BrowserRouter>
