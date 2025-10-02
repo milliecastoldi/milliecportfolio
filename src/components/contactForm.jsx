@@ -67,7 +67,7 @@ export default function ContactForm() {
             <input type="text" id="subject" name="subject" value={subject} onChange={(e) => setSubject(e.target.value)} /> <br />
 
             <label htmlFor="message">Message</label>
-            <textArea id="message" name="message" value={message} onChange={(e) => setMessage(e.target.value)} /> <br />
+            <textarea id="message" name="message" value={message} onChange={(e) => setMessage(e.target.value)} /> <br />
 
             <input type="submit" value="Submit Message" />
 
