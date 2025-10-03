@@ -7,11 +7,13 @@ export default function AboutPage() {
        <>
         <Nav />
         <div>
-            I am a third-year Informatics Major and Business minor at the University of Washington
-            Seattle Campus expecting to graduate in June 2027. 
+            <p>
+                I am a third-year Informatics Major and Business minor at the University of Washington
+                Seattle Campus expecting to graduate in June 2027. 
+            </p>
         </div>
 
        </>
-        );
+    );
 
 }
